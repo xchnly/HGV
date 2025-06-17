@@ -10,9 +10,10 @@ interface HeroWithProductsProps {
 export default function HeroWithProducts({ products }: HeroWithProductsProps) {
   return (
     <div className="relative">
-      <div className="bg-white h-16 relative z-0"></div>
       {/* Hero Section */}
-      <div className="bg-gray-100 pt-16 pb-80 lg:pb-96"> {/* Tinggi diperbesar untuk overlap */}
+      <div className=""> {/* Tinggi diperbesar untuk overlap */}
+      <div className="bg-white h-16 relative z-0"></div>
+      <div className="bg-gray-100 pt-16 pb-24 lg:pb-80"> {/* Tinggi diperbesar untuk overlap */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Konten Teks */}
@@ -45,6 +46,7 @@ export default function HeroWithProducts({ products }: HeroWithProductsProps) {
                 </div>
               </div>
             </div>
+            </div>
 
             {/* Gambar Model */}
             <div className="relative w-full h-full z-50 pointer-events-none"> {/* Tambahkan z-50 */}
@@ -52,7 +54,7 @@ export default function HeroWithProducts({ products }: HeroWithProductsProps) {
                 <img 
                   src="/images/model.png" 
                   alt="Fashion Model"
-                  className="w-full h-100 object-contain object-bottom"
+                  className="w-auto h-full object-contain object-bottom"
                 />
               </div>
             </div>
