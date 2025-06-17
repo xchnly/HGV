@@ -3,8 +3,7 @@
 import { useState } from 'react';
 import PromoBanner from '@/components/PromoBanner';
 import Navbar from '@/components/Navbar';
-import HeroSection from '@/components/HeroWithProducts';
-import NewArrivalsSection from '@/components/NewArrivalsSection';
+import HeroWithProducts from '@/components/HeroWithProducts';
 import CategorySection from '@/components/CategorySection';
 import Footer from '@/components/Footer';
 import { Product, Category } from '@/components/types';
@@ -12,7 +11,7 @@ import { Product, Category } from '@/components/types';
 export default function WomenPage() {
   const [showPromo, setShowPromo] = useState<boolean>(true);
 
-  const newArrivals: Product[] = [
+  const featuredProducts: Product[] = [
     {
       id: 1,
       name: "T-shirt with Tape Details",
@@ -36,8 +35,7 @@ export default function WomenPage() {
     <div className="min-h-screen bg-white">
       {showPromo && <PromoBanner onClose={() => setShowPromo(false)} />}
       <Navbar activeCategory="women" />
-      <HeroSection />
-      <NewArrivalsSection products={newArrivals} />
+      <HeroWithProducts products={featuredProducts} />
       <CategorySection categories={categories} />
       <Footer />
     </div>
